@@ -14,55 +14,56 @@
 
 </head>
 <body>
+    <style>
+
+
+
+        .btn-primary {
+            background-color: #007BFF;
+            border: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    
+        .card.card-body {
+            transition: all 0.3s ease;
+        }
+    
+        #blackColor{
+            color: black !important;
+        }
+    
+    
+        .links li a {
+        text-decoration: none;
+        font-weight: normal;
+        color: #333; /* Base color */
+        transition: all 0.3s ease; /* Smooth transition */
+    }
+    
+    .links li a:hover {
+        font-weight: bold; /* Bold on hover */
+        color: #000; /* Slightly darker color for emphasis */
+    }
+    
+    
+    </style>
 
     <!-- Header -->
     <header id="header">
         <div class="logo">
-            <a href="index.html">Mía Payssé <span></span></a>
+            <a href="index.html">Mia Payssé <span></span></a>
         </div>
         <a href="#menu"><span>Menu</span></a>
     </header>
 
     <!-- Nav -->
-    <nav id="menu">
-		<style>
-
-
-
-	.btn-primary {
-        background-color: #007BFF;
-        border: none;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .btn-primary:hover {
-        background-color: #0056b3;
-        transform: scale(1.05);
-    }
-
-    .card.card-body {
-        transition: all 0.3s ease;
-    }
-
-	#blackColor{
-		color: black !important;
-	}
-
-
-	.links li a {
-    text-decoration: none;
-    font-weight: normal;
-    color: #333; /* Base color */
-    transition: all 0.3s ease; /* Smooth transition */
-}
-
-.links li a:hover {
-    font-weight: bold; /* Bold on hover */
-    color: #000; /* Slightly darker color for emphasis */
-}
-
-
-		</style>
+    <nav id="menu"  style="			background-color: rgb(25, 25, 75);">
+	
         <ul class="links">
             <li><a href="index.html">Home</a></li>
             <li><a href="#one">Who am I?</a></li>
@@ -72,16 +73,17 @@
             <li><a href="#five">Values, Objectives & Goals</a></li>
             <li><a href="#sixs">Acknowledgments</a></li>
             <br><br></br>
-            <li><a href="generic.html">Generic</a></li>
-            <li><a href="elements.html">Elements</a></li>
+            <li hidden><a href="generic.html">Generic</a></li>
+            <li hidden><a href="elements.html">Elements</a></li>
         </ul>
     </nav>
 
     <!-- Banner -->
-    <section id="banner" class="bg-img" data-bg="banner.jpg">
-        <div class="inner">
+    <section id="banner" class="bg-img" data-bg="mia2.jpg">
+        <div class="">
+            <br><br><br><br><br><br><br><br><br><br><br><br>
             <header>
-                <h1>Mía Payssé</h1>
+                <h1>Mia Payssé</h1>
             </header>
         </div>
         <a href="#one" class="more">Learn More</a>
@@ -149,7 +151,7 @@
 </section>
 
 <!-- Three Recon-->
-<section id="three" class="wrapper post bg-img" data-bg="banner4.jpg">
+<section id="three" class="wrapper post bg-img" data-bg="logros.jpg">
     <div class="inner">
         <article class="box">
             <header>
@@ -175,7 +177,7 @@
 </section>
 
 <!-- Four Dev-->
-<section id="four" class="wrapper post bg-img" data-bg="banner3.jpg">
+<section id="four" class="wrapper post bg-img" data-bg="satelite.jpg">
     <div class="inner">
         <article class="box">
             <header>
@@ -249,9 +251,8 @@
 				</div>
 			</footer>
 		</article>
-		
-		<a href="#footer" class="more">Learn More</a>
     </div>
+    <a href="#footer" class="more">Learn More</a>
 </section>
 
 	
