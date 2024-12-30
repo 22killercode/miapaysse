@@ -80,14 +80,33 @@
 
     <!-- Banner -->
     <section id="banner" class="bg-img" data-bg="mia2.jpg">
-        <div class="">
-            <br><br><br><br><br><br><br><br><br><br><br><br>
-            <header>
+        <div>
+            <header id="banner-header" style="margin-top: 15rem;">
                 <h1>Mia Payssé</h1>
             </header>
         </div>
         <a href="#one" class="more">Learn More</a>
     </section>
+    
+    <script>
+        // Función para ajustar el margin-top en función del tamaño de la pantalla
+function adjustBannerMargin() {
+    const header = document.getElementById('banner-header');
+    
+    if (window.innerWidth <= 768) {
+        // Pantallas pequeñas (verticales)
+        header.style.marginTop = '25rem';
+    } else {
+        // Pantallas grandes
+        header.style.marginTop = '15rem';
+    }
+}
+
+// Llamar a la función cuando la página se carga y cuando la ventana cambia de tamaño
+window.addEventListener('load', adjustBannerMargin);
+window.addEventListener('resize', adjustBannerMargin);
+
+</script>
 
 <!-- One who im-->
 <section id="one" class="wrapper post bg-img" data-bg="miaQuienSoy.jpg">
