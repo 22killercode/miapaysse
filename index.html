@@ -72,6 +72,7 @@
             <li><a href="#four">My areas of dev. and interest</a></li>
             <li><a href="#five">Values, Objectives & Goals</a></li>
             <li><a href="#sixs">Acknowledgments</a></li>
+            <li><a href="#contact">Contacto</a></li>
             <br><br>
             <li hidden><a href="generic.html">Generic</a></li>
             <li hidden><a href="elements.html">Elements</a></li>
@@ -308,32 +309,108 @@ window.addEventListener('resize', adjustBannerMargin);
 	
     <!-- Footer -->
     <footer id="footer">
-        <div class="inner">
+        <div class="inner" id="contact">
             <h2>Contact Me</h2>
-            <form action="#" method="post">
+
+            <title>Contact Form</title>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <script type="text/javascript">
+                (function() {
+                    // Inicializa EmailJS con tu clave pública
+                    emailjs.init({
+                        publicKey: "uhxbu5G0vZT5D8IlV", // Reemplaza con tu clave pública
+                    });
+                })();
+            </script>
+            <script type="text/javascript">
+                window.onload = function() {
+                    document.getElementById('contact-form').addEventListener('submit', function(event) {
+                        event.preventDefault(); // Evita el envío predeterminado del formulario
+        
+                        // Enviar el formulario con EmailJS
+                        emailjs.sendForm('contact_service', 'contact_form', this)
+                            .then(() => {
+                                alert('¡Mensaje enviado con éxito!');
+                                this.reset(); // Limpia el formulario después del envío
+                            }, (error) => {
+                                alert('Error al enviar el mensaje: ' + error.text);
+                            });
+                    });
+                }
+            </script>
+
+
+            <form id="contact-form">
+                <!-- Campo oculto para simplificar el tutorial -->
+                <input type="hidden" name="contact_number" value="697483">
                 <div class="field half first">
                     <label for="name">Name</label>
-                    <input name="name" id="name" type="text" placeholder="Name">
+                    <input name="user_name" id="name" type="text" placeholder="Name" required>
                 </div>
                 <div class="field half">
                     <label for="email">Email</label>
-                    <input name="email" id="email" type="email" placeholder="Email">
+                    <input name="user_email" id="email" type="email" placeholder="Email" required>
                 </div>
                 <div class="field">
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+                    <textarea name="message" id="message" rows="6" placeholder="Message" required></textarea>
                 </div>
                 <ul class="actions">
                     <li><input value="Send Message" class="button alt" type="submit"></li>
                 </ul>
             </form>
+
+
+
+
+            
+
             <ul class="icons">
-                <li><a href="#https://www.linkedin.com/in/mia-payss%C3%A9/" class="icon round fa-linkedin"><span class="label">Linkedin</span></a></li>
+                <li><a href="https://www.linkedin.com/in/mia-payss%C3%A9/" class="icon round fa-linkedin"><span class="label">Linkedin</span></a></li>
                 <li><a href="#" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
                 <li><a href="#" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
                 <li><a href="#" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
             </ul>
         </div>
+
+
+
+        <style>
+            .whatsapp-float {
+                position: fixed;
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                right: 20px;
+                background-color: #25d366;
+                color: white;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+                z-index: 1000;
+            }
+    
+            .whatsapp-float:hover {
+                background-color: #1da851;
+            }
+    
+            .whatsapp-float img {
+                width: 35px;
+                height: 35px;
+            }
+        </style>
+        <a href="https://wa.me/5491136537176?text=¡Hola!%20Te %20 escribo %20 desde tu %20 pagina %20 web %20 quiero%20contactarte." 
+           target="_blank" 
+           class="whatsapp-float" 
+           title="Contactar por WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+        </a>
+
+
+
     </footer>
 
 
