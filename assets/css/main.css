@@ -4444,3 +4444,24 @@
 			}
 
 		}
+
+
+
+
+
+
+		/* Aseguramos que los videos sean responsivos */
+.video-container {
+    display: flex;
+    flex-direction: column; /* Los videos se apilan uno debajo del otro */
+    gap: 1rem; /* Espacio entre los videos */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    max-width: 800px; /* Puedes ajustar el ancho máximo si lo deseas */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+}
+
+.video {
+    width: 100%; /* Los videos ocuparán el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto del video */
+    border: 1px solid #ccc; /* Un borde opcional */
+}
